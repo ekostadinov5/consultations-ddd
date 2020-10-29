@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 // import logo from "../../logo.svg";
 import "./App.css";
-import { BrowserRouter as Router, Redirect, Route } from 'react-router-dom';
+import { HashRouter as Router, Redirect, Route } from 'react-router-dom';
 import {Button, Modal} from "react-bootstrap";
 
 import ProfessorService from "../../repository/axiosProfessorRepository";
@@ -24,7 +24,8 @@ import StudentProfile from "../StudentProfile/studentProfile";
 
 import Rooms from "../Rooms/rooms";
 
-import Login from "../Login/login";
+// import Login from "../Login/login";
+import CasLogin from "../Login/casLogin";
 
 class App extends Component {
 
@@ -383,8 +384,11 @@ class App extends Component {
                         <Route path={"/rooms"} exact render={() =>
                             <Rooms roomsByBuilding={this.state.roomsByBuilding} />}>
                         </Route>
-                        <Route path={"/login"} exact render={() =>
-                            <Login />}>
+                        {/*<Route path={"/login"} exact render={() =>*/}
+                        {/*    <Login />}>*/}
+                        {/*</Route>*/}
+                        <Route path={"/casLogin/:token/:identifier/:role"} exact render={() =>
+                            <CasLogin />}>
                         </Route>
                         <Redirect to={"/professors"}/>
                     </>

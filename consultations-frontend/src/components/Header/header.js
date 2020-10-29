@@ -4,11 +4,15 @@ import LocalStorageService from "../../service/localStorageService";
 
 const Header = (props) => {
 
+    const login = () => {
+        window.location.href = "http://localhost:8083/login";
+    }
+
     const logOut = () => {
         LocalStorageService.clearToken();
         LocalStorageService.clearIdentifier();
         LocalStorageService.clearRole();
-        window.location.href = '/';
+        window.location.href = 'http://localhost:8083/logout/cas';
     }
 
     const logInOrLogOutButton = () => {
@@ -21,9 +25,12 @@ const Header = (props) => {
         } else {
             return (
                 <div className="order-lg-last">
-                    <NavLink to="/login" className="btn btn-outline-light">
+                    {/*<NavLink to="/login" className="btn btn-outline-light">*/}
+                    {/*    Најава*/}
+                    {/*</NavLink>*/}
+                    <button onClick={login} className="btn btn-outline-light">
                         Најава
-                    </NavLink>
+                    </button>
                 </div>
             );
         }

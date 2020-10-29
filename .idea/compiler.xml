@@ -8,11 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="professor-management" />
-        <module name="consultations" />
-        <module name="user-management" />
         <module name="room-management" />
         <module name="shared-kernel" />
         <module name="student-management" />
+        <module name="consultations" />
+        <module name="user-management" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

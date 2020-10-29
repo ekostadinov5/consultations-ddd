@@ -75,6 +75,10 @@
             <version>3.7.0</version>
         </dependency>
         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-cas</artifactId>
+        </dependency>
+        <dependency>
             <groupId>mk.ukim.finki.emt.consultations</groupId>
             <artifactId>shared-kernel</artifactId>
             <version>0.0.1-SNAPSHOT</version>
